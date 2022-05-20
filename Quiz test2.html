@@ -186,6 +186,7 @@
 				.then(function (data) {
 					$('#btn').click(function () {
 						$('#options').show();
+						document.getElementById("signout").setAttribute('disabled', 'disabled');
 						adding_Questions(data.Questions, count);
 						$('.start_page').hide();
 						$('#prev').hide();
@@ -249,6 +250,7 @@
 						else {
 							creating_result(data);
 							clearInterval(timer);
+							document.getElementById("signout").removeAttribute('disabled');
 							document.getElementById("timesup").innerText = " Quiz Over ";
 						}
 					});
