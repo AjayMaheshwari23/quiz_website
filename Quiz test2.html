@@ -44,7 +44,7 @@
 		<div class="row d-flex justify-content-center">
 			<div class="col-md-8 border p-4">
 				<div class="card-body">
-					<h5 class="card-text float-right font-weight-bold">MC Quiz</h5>
+					<h5 class="card-text float-right font-weight-bold">Quiz</h5>
 					<h5>(<span id="number">0</span> of 5)</h5>
 				</div>
 				<hr>
@@ -54,7 +54,7 @@
 					<!--<p>You will get 5 point for each correct answer, At the end of the Quiz,
 						your total score will be displayed. Maximum score is 25 points. -->
 					</p>
-					<button class="btn btn-secondary d-flex mx-auto mt-4" id="btn">
+					<button class="btn btn-secondary d-flex mx-auto mt-4" id="btn" disabled="disabled" >
 						<h5>Start the Quiz</h5>
 					</button>
 				</div>
@@ -270,8 +270,9 @@
 		function onSignIn(googleUser) {
 			var profile = googleUser.getBasicProfile();
 			document.querySelector('#p1').innerText = ' Name : ' + profile.getName();
-			document.querySelector('#p2').innerText = ' ID : ' + profile.getId();
+// 			document.querySelector('#p2').innerText = ' ID : ' + profile.getId();
 			document.querySelector('#p3').innerText = ' Email : ' + profile.getEmail();
+			document.getElementById("btn").removeAttribute("disabled");
 		}
 
 	</script>
