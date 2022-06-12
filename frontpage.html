@@ -19,7 +19,7 @@
 </head>
 <style>
     body {
-        background-image: url(/images/vikto2.jpeg);
+        background-image: url(images/vikto2.jpeg);
         background-size: cover;
         background-repeat: no-repeat;
     }
@@ -59,7 +59,8 @@
         display: flex;
         margin: 20px;
         font-size: 20px;
-
+        display: inline-flex;
+        margin-left: 100px;
         cursor: pointer;
     }
 
@@ -122,14 +123,17 @@
             background: rgb(152 159 212 / 82);
             padding: 1em;
             border-radius: 1em;
-            width: 40%;
+            width: 50%;
             height: 30%;
+
+
         }
 
         .quote figcaption,
         .quote blockquote {
             margin: 1em;
             color: #020b56;
+            font-size: 20px;
         }
 
         .footer {
@@ -137,6 +141,7 @@
             left: 0;
             bottom: 0;
             width: 100%;
+            height: 4%;
             background: -webkit-linear-gradient(rgb(185, 74, 182), rgba(78, 92, 202, 0.816));
             text-align: center;
             color: rgb(229, 255, 203);
@@ -150,37 +155,45 @@
         <hr>
         <h1 class="viktorina"> <span style="font-size: 80px ;">V</span>IKTORINA</h1>
     </div>
-
-    <button class="button-64" role="button"><span><svg xmlns="http://www.w3.org/2000/svg" width="16" height="16"
-                fill="currentColor" class="bi bi-person-circle" viewBox="0 0 16 16">
-                <path d="M11 6a3 3 0 1 1-6 0 3 3 0 0 1 6 0z" />
-                <path fill-rule="evenodd"
-                    d="M0 8a8 8 0 1 1 16 0A8 8 0 0 1 0 8zm8-7a7 7 0 0 0-5.468 11.37C3.242 11.226 4.805 10 8 10s4.757 1.225 5.468 2.37A7 7 0 0 0 8 1z" />
-            </svg> Student Login</span></button>
-
-    <button class="button-64" role="button"><span><svg xmlns="http://www.w3.org/2000/svg" width="16" height="16"
-                fill="currentColor" class="bi bi-person-circle" viewBox="0 0 16 16">
-                <path d="M11 6a3 3 0 1 1-6 0 3 3 0 0 1 6 0z" />
-                <path fill-rule="evenodd"
-                    d="M0 8a8 8 0 1 1 16 0A8 8 0 0 1 0 8zm8-7a7 7 0 0 0-5.468 11.37C3.242 11.226 4.805 10 8 10s4.757 1.225 5.468 2.37A7 7 0 0 0 8 1z" />
-            </svg> Faculty Login</span></button>
     <div>
         <figure class="quote">
             <blockquote>
-                Viktorina , is an official quiz website for IIITL students .
-                But web browsers aren’t like web servers. If your back-end code is getting so big that it’s starting to
-                run noticably slowly, you can throw more computing power at it by scaling up your server. That’s not an
-                option on the front-end where you don’t really have <em>one</em> run-time environment—your end users
-                have their own run-time environment with its own constraints around computing power <strong>and</strong>
-                network connectivity.
+
+                Viktorina, official quiz website of IIITL is an application which is more personalized and
+                user-friendly, can only be used by IIITL students and admin. Educators and students easily manage and
+                deliver performance assessments. It helps to clear your concepts properly also enhances your academic
+                skills. Log-in to start attempting quiz.
+                <br>
+                <b>Embark on voyage of learning</b>
+
+
+
             </blockquote>
             <figcaption>
-                <cite>&mdash;Adithi , Ajay , Pallavi and Mahek</cite>
+                <cite>&mdash;BY & FOR IIIT LUCKNOW</cite>
             </figcaption>
         </figure>
     </div>
+    <div>
+        <a href="http://localhost/let/login/login.php">
+            <button class="button-64" role="button"><span><svg xmlns="http://www.w3.org/2000/svg" width="16" height="16"
+                        fill="currentColor" class="bi bi-person-circle" viewBox="0 0 16 16">
+                        <path d="M11 6a3 3 0 1 1-6 0 3 3 0 0 1 6 0z" />
+                        <path fill-rule="evenodd"
+                            d="M0 8a8 8 0 1 1 16 0A8 8 0 0 1 0 8zm8-7a7 7 0 0 0-5.468 11.37C3.242 11.226 4.805 10 8 10s4.757 1.225 5.468 2.37A7 7 0 0 0 8 1z" />
+                    </svg> Student Login</span></button></a>
+
+        <a href="http://localhost/let/login/login2.php">
+            <button class="button-64" role="button"><span><svg xmlns="http://www.w3.org/2000/svg" width="16" height="16"
+                        fill="currentColor" class="bi bi-person-circle" viewBox="0 0 16 16">
+                        <path d="M11 6a3 3 0 1 1-6 0 3 3 0 0 1 6 0z" />
+                        <path fill-rule="evenodd"
+                            d="M0 8a8 8 0 1 1 16 0A8 8 0 0 1 0 8zm8-7a7 7 0 0 0-5.468 11.37C3.242 11.226 4.805 10 8 10s4.757 1.225 5.468 2.37A7 7 0 0 0 8 1z" />
+                    </svg> Faculty ‎ Login </span></button></a>
+
+    </div>
     <footer class="footer">
-        <h2>Copyright reserved under ©Viktorina</h2>
+        <span style="font-size: 20px;">Copyright reserved under ©Viktorina</span>
     </footer>
 
 
