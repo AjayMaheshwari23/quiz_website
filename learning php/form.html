@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <link rel="stylesheet" href="formcss.css">
+    <title>Educational registration form</title>
+</head>
+
+<body>
+    <div class="main-block">
+        <div class="left-part">
+            <i class="fas fa-graduation-cap"></i>
+            <h1>Enter Details for your new Quiz</h1>
+        </div>
+        <form onsubmit="onsubmi(event)" id="form">
+            <div class="title">
+                <i class="fas fa-pencil-alt"></i>
+                <h2>Quiz Details</h2>
+            </div>
+
+
+            
+            <div class="info">
+                <input class="fname" type="text" name="name" placeholder="G_Form Code link">
+                <input type="number" name="name" placeholder="Time in 24Hr Format">
+                <!-- <input type="text" name="name" placeholder="Phone number"> -->
+            </div>
+
+
+
+            <button type="submit" onclick="onsubmit(event)">Submit</button>
+        </form>
+    </div>
+    <div id="MainQuiz" style="visibility: hidden;">
+        <h1>Am I visible</h1>
+        <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.4.1/css/all.css"
+            integrity="sha384-5sAR7xN1Nv6T6+dT2mhtzEpVJvfS3NScPQTrOxhwjIuvcA67KV2R5Jz6kr4abQsz" crossorigin="anonymous">
+        <link href="https://fonts.googleapis.com/css?family=Roboto:300,400,500,700" rel="stylesheet">
+    </div>
+
+</body>
+<script>
+    function onsubmi(e) {
+        e.preventDefault();
+        alert("Quiz Created");
+        window.location.href = "../admin_page.php";
+        // console.log("Form Submitted");
+        // document.getElementById('form').style.visibility = 'hidden';
+        // document.body.style.backgroundColor = white;
+        // document.getElementById('MainQuiz').style.visibility = 'visible';
+    }
+</script>
+
+</html>
