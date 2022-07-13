@@ -1,0 +1,205 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Josefin+Sans:wght@500&family=Kdam+Thmor+Pro&family=Ubuntu:wght@700&display=swap"
+        rel="stylesheet">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Dancing+Script:wght@700&family=Josefin+Sans:wght@500&family=Kdam+Thmor+Pro&family=Ubuntu:wght@700&display=swap"
+        rel="stylesheet">
+    <title>Viktorina Main Page</title>
+</head>
+<style>
+    body {
+
+        /* background-image: url(images/vikto2.jpeg);
+        background-size: cover;
+        background-repeat: no-repeat; */
+
+        background-image: url(images/vikto2.jpeg);
+        background-repeat: no-repeat;
+        background-position: center center;
+        background-attachment: fixed;
+        background-size: cover;
+    }
+
+    h1 {
+        background: -webkit-linear-gradient(rgb(109, 192, 255), rgb(255, 255, 255));
+        -webkit-background-clip: text;
+        -webkit-text-fill-color: transparent;
+        text-align: center;
+        align-items: center;
+        color: azure;
+        font-family: 'Josefin Sans', sans-serif;
+        font-family: 'Kdam Thmor Pro', sans-serif;
+        font-family: 'Ubuntu', sans-serif;
+        letter-spacing: 8px;
+    }
+
+    .viktorina {
+        background: -webkit-linear-gradient(rgb(109, 192, 255), rgb(255, 255, 255));
+        -webkit-background-clip: text;
+        -webkit-text-fill-color: transparent;
+        text-align: center;
+        align-items: center;
+        color: azure;
+        font-family: 'Dancing Script', cursive;
+        letter-spacing: 8px;
+    }
+
+
+    .button-64 {
+        background-image: linear-gradient(144deg, #AF40FF, #5B42F3 50%, #00DDEB);
+        border: 0;
+        border-radius: 8px;
+        box-shadow: rgba(151, 65, 252, 0.2) 0 15px 30px -5px;
+        box-sizing: border-box;
+        color: #FFFFFF;
+        display: flex;
+        margin: 20px;
+        font-size: 20px;
+        display: inline-flex;
+        margin-left: 100px;
+        cursor: pointer;
+    }
+
+    .button-64:active,
+    .button-64:hover {
+        outline: 0;
+    }
+
+    .button-64 span {
+        background-color: rgb(5, 6, 45);
+        padding: 16px 24px;
+        border-radius: 6px;
+        width: 100%;
+        height: 100%;
+        transition: 300ms;
+    }
+
+    .button-64:hover span {
+        background: none;
+    }
+
+    @media (min-width: 768px) {
+        .button-64 {
+            font-size: 24px;
+            min-width: 196px;
+        }
+    }
+
+    @media screen and (max-width: 1000px) {
+        .quote {
+            margin: 6px;
+            background: rgb(152 159 212 / 82);
+            padding: 1em;
+            border-radius: 1em;
+            width: 90%;
+            height: 30%;
+        }
+
+        .quote figcaption,
+        .quote blockquote {
+            color: #020b56;
+            margin: 1em;
+        }
+
+        .footer {
+
+            position: fixed;
+            left: 0;
+            bottom: 0;
+            width: 100%;
+            background: -webkit-linear-gradient(rgb(185, 74, 182), rgba(78, 92, 202, 0.816));
+            text-align: center;
+            color: rgb(229, 255, 203);
+        }
+    }
+
+
+    @media screen and (min-width: 1000px) {
+        .quote {
+            margin: 30px;
+            background: rgb(152 159 212 / 82);
+            padding: 1em;
+            border-radius: 1em;
+            width: 50%;
+            height: 30%;
+        }
+
+        .quote figcaption,
+        .quote blockquote {
+            margin: 1em;
+            color: #020b56;
+            font-size: 20px;
+        }
+
+        .footer {
+
+            position: fixed;
+            left: 0;
+            bottom: 0;
+            width: 100%;
+            height: 4%;
+            background: -webkit-linear-gradient(rgb(185, 74, 182), rgba(78, 92, 202, 0.816));
+            text-align: center;
+            color: rgb(229, 255, 203);
+        }
+    }
+</style>
+
+<body>
+    <div class="navbar">
+        <h1><b> INDIAN INSTITUTE OF INFORMATION TECHNOLOGY , LUCKNOW</b></h1>
+        <hr>
+        <h1 class="viktorina"> <span style="font-size: 80px ;">V</span>IKTORINA</h1>
+    </div>
+    <div>
+        <figure class="quote">
+            <blockquote>
+                Viktorina, official quiz website of IIITL is an application which is more personalized and
+                user-friendly, can only be used by IIITL students and admin. Educators and students easily manage and
+                deliver performance assessments. It helps to clear your concepts properly also enhances your academic
+                skills. Log-in to start attempting quiz.
+                <br>
+                <b>Embark on voyage of learning</b>
+            </blockquote>
+            <figcaption>
+                <cite>&mdash;BY & FOR IIIT LUCKNOW</cite>
+            </figcaption>
+        </figure>
+    </div>
+    <div>
+        <a href="http://localhost/AJAY/login_form.php">
+            <button class="button-64" role="button"><span><svg xmlns="http://www.w3.org/2000/svg" width="16" height="16"
+                        fill="currentColor" class="bi bi-person-circle" viewBox="0 0 16 16">
+                        <path d="M11 6a3 3 0 1 1-6 0 3 3 0 0 1 6 0z" />
+                        <path fill-rule="evenodd"
+                            d="M0 8a8 8 0 1 1 16 0A8 8 0 0 1 0 8zm8-7a7 7 0 0 0-5.468 11.37C3.242 11.226 4.805 10 8 10s4.757 1.225 5.468 2.37A7 7 0 0 0 8 1z" />
+                    </svg> Student Login</span></button></a>
+
+        <a href="http://localhost/AJAY/login_form_F.php">
+            <button class="button-64" role="button"><span><svg xmlns="http://www.w3.org/2000/svg" width="16" height="16"
+                        fill="currentColor" class="bi bi-person-circle" viewBox="0 0 16 16">
+                        <path d="M11 6a3 3 0 1 1-6 0 3 3 0 0 1 6 0z" />
+                        <path fill-rule="evenodd"
+                            d="M0 8a8 8 0 1 1 16 0A8 8 0 0 1 0 8zm8-7a7 7 0 0 0-5.468 11.37C3.242 11.226 4.805 10 8 10s4.757 1.225 5.468 2.37A7 7 0 0 0 8 1z" />
+                    </svg> Faculty ‎ Login </span></button></a>
+
+    </div>
+    <footer class="footer">
+        <span style="font-size: 20px;">Copyright reserved under ©Viktorina</span>
+    </footer>
+
+
+</body>
+
+</html>
