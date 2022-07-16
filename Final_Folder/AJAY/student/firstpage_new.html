@@ -1,0 +1,130 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet">
+    <script src="https://kit.fontawesome.com/9edbc45998.js" crossorigin="anonymous"></script>
+
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"
+        integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css">
+    <title>PHP login system!</title>
+    <link rel="stylesheet" href="first.css">
+</head>
+
+<body>
+    <!-- <header>Viktorina</header> -->
+    <div id="mySidemenu" class="sidemenu">
+        <a href="javascript:void(0)" class="close" onclick="closeSM()">
+            &times;</a>
+        <div class="sm-wrapper">
+            <a href="firstpage.html" style="font-size:35px"><i class="fas fa-home" color="white"></i> Home</a>
+            <a href="quiz.html" style="font-size:35px"><i class="fas fa-qrcode" color="white"></i> Quiz's</a>
+            <a href="profile.html" style="font-size:35px"><i class="fas fa-address-card" color="white"></i> Profile</a>
+            <a class="nav-link" href="logout.php" style="font-size:35px"><i class="fas fa-door-open" color="white"></i>
+                Logout</a>
+        </div>
+    </div>
+    <div id="pg-content">
+        <div style="font-size: 50px; cursor:pointer ; color:#ffffff;" onclick="openSM()">&#9776; <b>Viktorina</b></div>
+        <!-- <h1>Side Menu<br><span>Tutorial</span></h1> -->
+    </div>
+
+
+
+
+    <br>
+    <div clas="main_d">
+    <div style="align-items:center;" >
+
+        <div class="wrapper">
+            <div class="display">
+                <div id="time" style="align-items: center;">
+
+                </div>
+                <span> </span>
+                <span> </span>
+            </div>
+        </div>
+        
+        <div class="cont">
+        <div id="Line-f"><h1>Hi,<span>User</span></h1></div><br>
+        <div class="loading-wrapper">
+           <div class="waivy"><b>
+            <span style="--i:1">W</span>
+            <span style="--i:2">E</span>
+            <span style="--i:3">L</span>
+            <span style="--i:4">C</span>
+            <span style="--i:5">O</span>
+            <span style="--i:6">M</span>
+            <span style="--i:7">E</span>
+            <span style="--i:8"> </span>
+            <span style="--i:9">T</span>
+            <span style="--i:10">O</span>
+            <span style="--i:11"> </span>
+            <span style="--i:12">V</span>
+            <span style="--i:13">I</span>
+            <span style="--i:14">K</span>
+            <span style="--i:15">T</span>
+            <span style="--i:16">O</span>
+            <span style="--i:17">R</span>
+            <span style="--i:18">I</span>
+            <span style="--i:19">N</span>
+            <span style="--i:20">A</span></b>
+            </div>
+        </div>
+        <div class="Last-l">Easy and Online Intuitive Online Testing</div>
+        <button type="button" class="btn">Get Started</button>
+        </div>
+
+        
+        </div>
+
+        </section>
+
+        <script>
+            function openSM() {
+                document.getElementById("mySidemenu").style.width = "300px";
+                document.getElementById("pg-content").style.width = "3000px";
+                document.getElementById("pg-content").style.marginLeft = "235px";
+
+            }
+            function closeSM() {
+                document.getElementById("mySidemenu").style.width = "0";
+                document.getElementById("mySidemenu").style.marginLeft = "0";
+                document.getElementById("pg-content").style.marginLeft = "0px";
+            }
+
+
+            setInterval(() => {
+                const time = document.querySelector("#time");
+                let date = new Date();
+                let hours = date.getHours();
+                let minutes = date.getMinutes();
+                let seconds = date.getSeconds();
+                let day_night = "AM";
+                if (hours > 12) {
+                    day_night = "PM";
+                    hours = hours - 12;
+                }
+                if (hours < 10) {
+                    hours = "0" + hours;
+                }
+                if (minutes < 10) {
+                    minutes = "0" + minutes;
+                }
+                if (seconds < 10) {
+                    seconds = "0" + seconds;
+                }
+                time.textContent = hours + ":" + minutes + ":" + seconds + " " + day_night;
+            });
+
+        </script>
+</body>
+</body>
+
+</html>
