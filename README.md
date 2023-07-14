@@ -19,5 +19,29 @@ This web application allows users to participate in quizzes on various topics, t
 - New quiz: This feature allows the admin to create a new quiz.
 
 
+## Demo Video & Screenshots 
+
+For Video please click on this <a href="https://drive.google.com/file/d/19luYlx66Vpxh1l8ZdCdIVeMxHG9AFvyp/view?usp=sharing">link
+
+
+#### Light Mode
+![Light Mode](./assets_readme/light.png)
+
+#### Dark Mode
+![dark Mode](./assets_readme/dark.png)
+
+#### Others
+![Other Screens](./assets_readme/screens.png)
+
+#### Neon Console
+![Neon Console](./assets_readme/neon.png)
+
+#### Hasura Console
+![Hasura Console](./assets_readme/hasura.png)
+
+#### Schema
+![Schema Image](./assets_readme/schema.png)
+
+
 
 
