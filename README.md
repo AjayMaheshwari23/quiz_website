@@ -1,3 +1,5 @@
+![logo](./assets_readme/logo.png)
+
 # Viktorina
 **Viktorina** is a quiz application that aims to provide a more personalized and secure quiz-taking experience for users. It is also a platform where educators can easily manage and provide more secure performance evaluations.
 This web application allows users to participate in quizzes on various topics, test their knowledge, and challenge themselves against the clock.
