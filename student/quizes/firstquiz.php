@@ -8,15 +8,20 @@ if(!isset($_SESSION['user_name']) && !isset($_SESSION['user_email']) ){
 
 
 error_reporting(0);
-$conn  = mysqli_connect('localhost','root','','faculty_waala2');
+$conn = mysqli_connect('localhost','id19262624_root','4>x!2^~0$Sz0d-C}','id19262624_user_db');
 $query = " SELECT * FROM quiz_data2 ORDER BY ID LIMIT 0,1 ";
 $data  = mysqli_query($conn,$query);
 $total = mysqli_num_rows($data);
 
 
-$conn2  = mysqli_connect('localhost','root','','flag');
-$query2 = " SELECT * FROM flag_data WHERE number='first' ";
-$data2  = mysqli_query($conn2,$query2);
+// $conn2  = mysqli_connect('localhost','root','','flag');
+$query2 = " SELECT * FROM flag_data2 WHERE number='first' && email='".$_SESSION['user_email']."'  ";
+$data2  = mysqli_query($conn,$query2);
+  foreach($data2 as $row){
+            $bul_value =  $row['bool_value'];
+        }
+        //  echo $bul_value;
+         
 
 
 
@@ -57,7 +62,19 @@ $total2 = mysqli_num_rows($data2);
         height:100%;
         /* background-repeat: no-repeat; */
         /* background-size:cover; */
+        user-select: none;
     }
+            @media print {
+
+            html,
+            body {
+
+                /* Hide the whole page */
+                display: none;
+            }
+
+         
+        }
 
     header{
       height:8vh;
@@ -95,7 +112,20 @@ $total2 = mysqli_num_rows($data2);
 
 .base-timer__svg {
   transform: scaleX(-1);
+  margin-top:-40px;
+  margin-right:20px;
   /* margin-left:5%; */
+}
+
+.base-timer__label {
+  position: absolute;
+  width: 180px;
+  height: 100px;
+  top: 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 48px;
 }
 
 .base-timer__circle {
@@ -128,17 +158,6 @@ $total2 = mysqli_num_rows($data2);
 
 .base-timer__path-remaining.red {
   color: red;
-}
-
-.base-timer__label {
-  position: absolute;
-  width: 200px;
-  height: 200px;
-  top: 0;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  font-size: 48px;
 }
 
     #app{
@@ -179,10 +198,11 @@ $total2 = mysqli_num_rows($data2);
     #main{
         display:flex;
         font-family: Poppins, sans-serif;
+        margin-left:80px;
     }
 
     .form h1{
-       margin-top: 50px;
+       margin-top: 30px;
        padding-left:20vh;
        padding-top:1vh;
        font-family:Copperplate, Papyrus, fantasy;
@@ -191,7 +211,9 @@ $total2 = mysqli_num_rows($data2);
     }
 
     .form{
-        padding-left:5vh;
+        padding-left:5%;
+        margin-top:-6vh;
+        /* padding-top:-591vh; */
     }
 
     h2 span {
@@ -242,8 +264,116 @@ $total2 = mysqli_num_rows($data2);
     }
 
     #quizleft {
-      margin-left:-60px;
+      margin-left:-2%;
     }
+
+
+    
+
+    .progress {
+        background-color: #d8d8d8;
+        border-radius: 20px;
+        position: relative;
+        margin: 15px 0;
+        height: 30px;
+        width: 570px;
+    }
+
+    .progress-done {
+        background: linear-gradient(to left, #F2709C, #FF9472);
+        box-shadow: 0 3px 3px -5px #F2709C, 0 2px 5px #F2709C;
+        border-radius: 20px;
+        color: #fff;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        height: 100%;
+        width: 0;
+        opacity: 0;
+        transition: 0.1s ease-in-out 0.1s;
+    }
+
+    .pids-wrapper {
+        width: 100%;
+    }
+
+    .pid {
+        width: calc(10% - 10px);
+        height: 10px;
+        display: inline-block;
+        margin: 5px;
+    }
+
+    #insidequiz{
+      overflow-y:auto;
+      height:80vh;
+    }
+
+    #rightpart{
+      height:80%;
+    }
+    
+    
+    
+    
+    @media only screen and (max-width: 768px) {
+  /* For mobile phones: */
+  [class*="col-"] {
+    width: 100%;
+  }
+  #leftpart{
+    width:100%; 
+        width: 97vw;
+  }
+  
+  #quizleft{
+          width: 97vw;
+  }
+
+  #rightpart{
+      width:100%;
+    }
+
+    #main{
+      /*width:100vw;*/
+      display: table-row-group;
+    }
+    
+    .form h1 {
+        width:4vw;
+        margin-left: -27%;
+    }
+    
+    li{
+        width:80vw;
+        margin:4%;
+    }
+    
+    body{
+            background-color: #aebbff;
+    }
+    
+    .base-timer__svg {
+            margin-right: 54vw;
+    }
+    
+    .base-timer__label {
+        margin-left:-20vw;
+    }
+    
+    .progress {
+     width:85vw;   
+    }
+    
+    .base-timer {
+        margin-left:-37vw;
+    }
+    
+    .form .tb {
+        margin-top: 13vh;
+    }
+    
+}
 </style>
 
 <body>
@@ -254,8 +384,9 @@ $total2 = mysqli_num_rows($data2);
     <!-- Camera and audio --> 
     <!-- timer clock/animation by js -->
 
-    <header>
-        <h1><b> ------- VIKTORINA ------- </b></h1>
+    <header id="mainheading">
+        <h1 ><b>  VIKTORINA-1 </b></h1>
+        <!--<h1 ><b> ------- VIKTORINA ------- </b></h1>-->
         <!-- <h1><b>📗 ------- VIKTORINA ------- 📗</b></h1> -->
         <!-- <h1><b>VIKTORINA MAIN QUIZ PAGE</b></h1> -->
     </header>
@@ -291,17 +422,26 @@ $total2 = mysqli_num_rows($data2);
         //     echo  $row['fname'];
         // }
         // echo $value;
-         foreach($data2 as $row){
-            $bul_value =  $row['bool_value'];
-        }
-        // echo $bul_value;
+       
         // echo $total2;
         ?>
-            <div overflow="auto" id="quizleft" >
-            <iframe
-                src="https://docs.google.com/forms/d/e/1FAIpQLSc7UfFlj7vIFkcP68BM8DNPK0P7OymV-dUdvNWMVT9_tCIvGA/viewform?embedded=true"
-                width="824px" height="635px" frameborder="0" marginheight="0" marginwidth="0">Loading…</iframe>
-            </div> 
+        
+        <div overflow="auto" id="quizleft" >
+
+        <div id="insidequiz">
+            
+                <?php
+                  foreach($data as $row){
+                   echo $row['fname'];
+                  }
+                 ?>
+            <!--<iframe-->
+            <!--    src="https://docs.google.com/forms/d/e/1FAIpQLSc7UfFlj7vIFkcP68BM8DNPK0P7OymV-dUdvNWMVT9_tCIvGA/viewform?embedded=true"-->
+            <!--    width="824px" height="635px" frameborder="0" marginheight="0" marginwidth="0">Loading…</iframe>-->
+
+            </div>
+        </div> 
+        <div id="rightpart">
             
             <div class="form">
               <div class="tb">
@@ -324,6 +464,17 @@ $total2 = mysqli_num_rows($data2);
             </tr>
               </table>
               </div>  
+              <h1> Audio Detector</h1>
+    <!-- <h1 id="volume">F</h1> -->
+    <div class="progress">
+        <div class="progress-done" data-done="30" id="progress-done">
+
+        </div> 
+
+
+      
+
+    </div>
                 <h1><b>INSTRUCTIONS</b></h1><br><br>
                 <ul type="block" class="inst">
                     <h3><li>The quizzes consists of questions carefully designed to help you self-assess your comprehension of the information presented on the topics covered in the module.</li></h3><br>
@@ -333,6 +484,8 @@ $total2 = mysqli_num_rows($data2);
             </div>
         
     </div>
+
+      </div>
 
 
 </body>
@@ -344,11 +497,11 @@ $total2 = mysqli_num_rows($data2);
     let time = startingminutes * 60;
  var bulvalue = <?php echo json_encode($bul_value); ?>;
  console.log(bulvalue);
-    // if(bulvalue==4)
-    if(bulvalue==1)
+    //if(bulvalue==4)
+     if(bulvalue==1)
     {
         window.alert("🚨🚨 !! You Can Open a Quiz only Once  ");
-            window.location.href = '../quiz.php';
+            window.location.href = 'https://webdproj2.000webhostapp.com/webdproj2/AJAY/student/quiz.php';
     }else{
             
          console.log("Ok Quiz dedo");
@@ -368,13 +521,16 @@ $total2 = mysqli_num_rows($data2);
             console.log("15 Seconds left");
             document.getElementById("alert").style.backgroundColor =  "#154350";   
             document.getElementById("alert").innerHTML ="<span>Last 15 seconds , </span><span>Submit Your Quiz otherwise quiz will show alert</span> ";
+            // document.queryselector(".base-timer__svg").style.margin-top=0px;
+            // document.getElementById("mainheading").innerHTML ="<h1 ><b> ------- VIKTOFFFRINA ------- </b></h1>";
+            // document.getElementById("mainheading").disabled=true;
             // message("Last 10 seconds , Submit Your Quiz otherwise quiz will show alert");
         }
         if (time == 0) {
            <?php 
            //----------
-           $update2 = "UPDATE `flag_data` SET bool_value='1' WHERE number='first' ";
-           $query_run = mysqli_query($conn2,$update2);
+$update2 = "UPDATE `flag_data2` SET bool_value='1' WHERE number='first' && email='".$_SESSION['user_email']."'  ";
+ $query_run = mysqli_query($conn,$update2);
             //-------
 
         //    if($query_run)
@@ -403,12 +559,12 @@ $total2 = mysqli_num_rows($data2);
     });
 
     window.addEventListener('blur', function (event) {
-        //  count++;
+         count++;
         if (count == 1) {
             alert('You have either Opened a new tab or switched to a different screen 🚨 ');
         } else if (count == 3) {
             window.alert("CHEATING  🚨🚨 !! We have Ended You Quiz ");
-            window.location.href = '../quiz.php';
+            window.location.href = 'https://webdproj2.000webhostapp.com/webdproj2/AJAY/student/quiz.php';
         }
     });
 
@@ -468,7 +624,7 @@ startTimer();
 function onTimesUp() {
   clearInterval(timerInterval);
   // R E D IR E C T   TO   QU I Z   P AG E 
-  // window.location.href = '../quiz.php';
+   window.location.href = 'https://webdproj2.000webhostapp.com/webdproj2/AJAY/student/quiz.php';
 }
 
 function startTimer() {
@@ -535,6 +691,99 @@ function setCircleDasharray() {
     .getElementById("base-timer-path-remaining")
     .setAttribute("stroke-dasharray", circleDasharray);
 }
+
+
+
+//Script for Sound Bar
+
+    const progress = document.querySelector('.progress-done');
+    progress.setAttribute('data-done', 100);
+
+
+    // var dataAttribute = progress.getAttribute('data-done');
+    // console.log(dataAttribute);
+// 
+    // var pdone = document.getElementById("progress-done").
+
+
+    navigator.mediaDevices.getUserMedia({
+        audio: true
+        // video: true
+    })
+        .then(function (stream) {
+            const audioContext = new AudioContext();
+            const analyser = audioContext.createAnalyser();
+            const microphone = audioContext.createMediaStreamSource(stream);
+            const scriptProcessor = audioContext.createScriptProcessor(2048, 1, 1);
+
+            analyser.smoothingTimeConstant = 0.8;
+            analyser.fftSize = 1024;
+
+            microphone.connect(analyser);
+            analyser.connect(scriptProcessor);
+            scriptProcessor.connect(audioContext.destination);
+            scriptProcessor.onaudioprocess = function () {
+                const array = new Uint8Array(analyser.frequencyBinCount);
+                analyser.getByteFrequencyData(array);
+                const arraySum = array.reduce((a, value) => a + value, 0);
+                const average = arraySum / array.length;
+                const finalvol = Math.round(average);
+
+
+                //JUGAAD
+                // console.log(Math.round(average));
+                console.log(finalvol);
+                // document.write(Math.round(average));
+                // document.getElementById("volume").innerHTML = 10* finalvol + '%';
+                // colorPids(average);
+                progress.setAttribute('data-done', 2 * finalvol);
+                progress.innerHTML = 2 * finalvol + '%';
+                progress.style.width = progress.getAttribute('data-done') + '%';
+                progress.style.opacity = 1;
+                if(2*finalvol>=220)
+                {
+                  console.log("inside if");
+                //  window.alert("🚨🚨 !! You Can Open a Quiz only Once  ");
+                 window.location.href = '../quiz.php';
+                }
+            };
+        })
+        .catch(function (err) {
+            /* handle the error */
+            console.error(err);
+        });
+
+
+    /// Screenshot nahi lene denge 
+        //    window.addEventListener('keypress', e => {
+        //    window.addEventListener('keydown', e => {
+
+
+        const keyboard = document.querySelector('.keyboard');
+        let keycount = 0;
+        window.addEventListener('keyup', e => {
+            console.log(e);
+            // if(e.ctrlKey && e.keyCode ===65 )
+            // {
+            //     console.log("Control key is Pressed");
+            // }
+            if (e.keyCode === 44 || e.keyCode === 45 || e.keyCode === 17) {
+                // if (e.keyCode === 	48 ) {
+                // alert("Sorry ! you cannot use " + e.key);
+                keycount++;
+                e.preventDefault();
+                console.log(keycount);
+                if (keycount == 2) {
+                    window.alert("🚨🚨 !! CHEATING You are trying to Capture Screenshots ");
+                    window.location.href = '../quiz.php';
+                }
+            }
+        })
+
+     
+
+
+
 </script>
 
 </html>
